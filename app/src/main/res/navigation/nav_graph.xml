@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/signIn">
+    <fragment
+        android:id="@+id/editTextFragment"
+        android:name="com.cons.android.testv2.EditTextFragment"
+        android:label="fragment_text_edit"
+        tools:layout="@layout/fragment_text_edit" />
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.cons.android.testv2.ListFragment"
+        android:label="ListFragment" >
+        <action
+            android:id="@+id/action_listFragment_to_detailTopicFragment"
+            app:destination="@id/detailTopicFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailTopicFragment"
+        android:name="com.cons.android.testv2.DetailTopicFragment"
+        android:label="fragment_topic_detail">
+        <argument
+            android:name="id"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/signIn"
+        android:name="com.cons.android.testv2.SignIn"
+        android:label="SignIn" >
+        <action
+            android:id="@+id/action_signIn_to_listFragment"
+            app:destination="@id/listFragment"
+            app:popUpTo="@id/nav_graph"/>
+    </fragment>
+    <fragment
+        android:id="@+id/synopsis"
+        android:name="com.cons.android.testv2.detail.Synopsis"
+        android:label="synopsis_fragment"
+        tools:layout="@layout/synopsis_fragment" />
+    <fragment
+        android:id="@+id/thesis"
+        android:name="com.cons.android.testv2.detail.Thesis"
+        android:label="thesis_fragment"
+        tools:layout="@layout/thesis_fragment" />
+    <fragment
+        android:id="@+id/antithesis"
+        android:name="com.cons.android.testv2.detail.Antithesis"
+        android:label="antithesis_fragment"
+        tools:layout="@layout/antithesis_fragment" />
+    <fragment
+        android:id="@+id/analysis"
+        android:name="com.cons.android.testv2.detail.Analysis"
+        android:label="analysis_fragment"
+        tools:layout="@layout/analysis_fragment" />
+    <fragment
+        android:id="@+id/conclusion"
+        android:name="com.cons.android.testv2.detail.Conclusion"
+        android:label="conclusion_fragment"
+        tools:layout="@layout/conclusion_fragment" />
+</navigation>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/detailTopicFragment"
+        android:title="Synopsis"/>
+    <item
+        android:id="@+id/thesis"
+        android:title="Thesis"/>
+    <item
+        android:id="@+id/antithesis"
+        android:title="Antithesis"/>
+    <item
+        android:id="@+id/analysis"
+        android:title="Analysis"/>
+    <item
+        android:id="@+id/conclusion"
+        android:title="Conclusion"/>
+
+</menu>
